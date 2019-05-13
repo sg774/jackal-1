@@ -4,14 +4,6 @@ Changelog for package jackal_description
 
 Forthcoming
 -----------.
-* Merge pull request `#56 <https://github.com/jackal/jackal/issues/56>`_ from jackal/urdf_additions
-  Added all extra fender changes
-* Added all extra fender changes
-* Contributors: Dave Niewinski
-
-* Made minor changes to syntax for kinetic warnings
-* Contributors: Dave Niewinski
-
 * Added stereo camera accessory.
 * Removed unused variable jackal_description_dir
 * Make urdf refer explicitly to jackal_description, rather than relying on current working directory being correct, for easier external includes
