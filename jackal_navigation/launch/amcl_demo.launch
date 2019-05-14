@@ -1,13 +1,23 @@
 <launch>
 
+  <arg name="scan_topic" value="velodyne_scan1" /> -->
+
   <!-- Run the map server -->
- <arg name="map_file" default="$(find jackal_navigation)/maps/jackal_race.yaml"/>
- <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+  <!-- arg name="map_file" default="$(find jackal_navigation)/maps/multipath.yaml"/ -->
+  <arg name="map_file" default="$(find jackal_navigation)/maps/ped_sim.yaml"/>
+  
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
 
-  <!--- Run AMCL -->
- <include file="$(find jackal_navigation)/launch/include/amcl.launch" />
-
+  <!--- Run AMCL
+  <include file="$(find jackal_navigation)/launch/include/amcl.launch" />
+  -->
+  <node pkg="tf"
+    type="static_transform_publisher"
+    name="link1_broadcaster"
+    args="0 0 0 0 0 0 map odom 100" />
   <!--- Run Move Base -->
- <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+  <!-- DWA Experiment -->
+  <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lmpcc)/rviz_config/dwa_config.rviz" />
 
 </launch>

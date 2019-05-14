@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Run the map server -->
+  <arg name="map_file" default="$(find jackal_navigation)/maps/lab_vlp.yaml"/> 
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
+
+  <!--- Run AMCL -->
+ <include file="$(find jackal_navigation)/launch/include/vlp_amcl.launch" />
+
+  <!--- Run Move Base -->
+  <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
+  
+ <arg name="scan_topic" value="scan" />
+
+</launch>
