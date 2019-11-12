@@ -379,6 +379,18 @@
         </geometry>
       </visual>
   </link>
+  
+  <!--<link name="front_camera_link">
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+  </link>
+  <joint name="front_camera_joint" type="fixed">
+    <parent link="chassis_link"/>
+    <child link="front_camera_link"/>
+    <origin xyz="0 -0.4 1.4" rpy="0 0.05 -1.5707"/>
+  </joint> -->
 
   <!-- Bring in simulation data for Gazebo. -->
   <xacro:include filename="jackal.gazebo" />

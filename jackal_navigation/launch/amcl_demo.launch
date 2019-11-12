@@ -4,7 +4,8 @@
 
   <!-- Run the map server -->
   <!-- arg name="map_file" default="$(find jackal_navigation)/maps/multipath.yaml"/ -->
-  <arg name="map_file" default="$(find jackal_navigation)/maps/ped_sim.yaml"/>
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/corridor2.yaml"/> -->
+  <arg name="map_file" default="$(find jackal_navigation)/maps/corridor3.yaml"/> 
   
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
 
