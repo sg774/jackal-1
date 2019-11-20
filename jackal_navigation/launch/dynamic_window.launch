@@ -3,7 +3,7 @@
   <arg name="scan_topic" value="velodyne_scan1" /> -->
  
  <!-- Run the map server --> 
-  <arg name="map_file" default="$(find jackal_navigation)/maps/dcsc_15_10.yaml"/>
+  <arg name="map_file" default="$(find jackal_navigation)/maps/corridor3.yaml"/>
   
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
 
