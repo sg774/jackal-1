@@ -5,7 +5,14 @@
   <!-- Run the map server -->
   <!-- arg name="map_file" default="$(find jackal_navigation)/maps/multipath.yaml"/ -->
   <!--<arg name="map_file" default="$(find jackal_navigation)/maps/corridor2.yaml"/> -->
-  <arg name="map_file" default="$(find jackal_navigation)/maps/corridor3.yaml"/> 
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/corridor3.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map2.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map3.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map4.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map5.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map6.yaml"/> -->
+  <!--<arg name="map_file" default="$(find jackal_navigation)/maps/map7.yaml"/> -->
+  <arg name="map_file" default="$(find jackal_navigation)/maps/map8.yaml"/> 
   
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" /> 
 
@@ -19,6 +26,6 @@
   <!--- Run Move Base -->
   <!-- DWA Experiment -->
   <include file="$(find jackal_navigation)/launch/include/move_base.launch" />
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lmpcc)/rviz_config/dwa_config.rviz" />
+<!--  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find lmpcc)/rviz_config/dwa_config.rviz" /> -->
 
 </launch>
